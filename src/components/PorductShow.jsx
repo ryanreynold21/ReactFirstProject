@@ -3,10 +3,12 @@ import Card from './Card'
 import Navbar from './Navbar';
 import productsList from './data';
 import Cart from './cart';
+import Search from './Search';
 
 const PorductShow = () => {
   const [products,setProduct] = useState(productsList);
   const [carts,setcart] = useState([]);
+
 
   const delCart = (id) => {
     setcart(carts.filter(itemInCart => itemInCart.id !== id));
@@ -44,7 +46,7 @@ const PorductShow = () => {
   // console.log(products)
   return (
     <div className=''>
-        <Navbar delCart={delCart} inc_decBtn={inc_decBtn} carts={carts}/>
+        <Navbar products={products} delCart={delCart} inc_decBtn={inc_decBtn} carts={carts}/>
         <div className="row mt-3">
          {products.map( product => (
           <div className="col-12 col-md-3" key={product.id}>

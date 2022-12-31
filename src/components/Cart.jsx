@@ -17,8 +17,8 @@ const Cart = ({carts,inc_decBtn,delCart}) => {
   <div className="offcanvas-body">
     {carts.map( itemInCart => <CartItem delCart={delCart} inc_decBtn={inc_decBtn} itemInCart={itemInCart} key={itemInCart.id} />)}
   </div>
-        <div className=" position-absolute fixed-bottom d-flex justify-content-between align-content-center m-3 bg-secondary text-white rounded rounded-3 p-2">
-            <h5>Checkout </h5>
+        <div className=" position-absolute fixed-bottom d-flex justify-content-between align-content-center m-3 bg-secondary text-white rounded rounded-3 p-1">
+            <h5 className=''>Total </h5>
             <span> £ {floorTotal} </span>
         </div>
 </div>

@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Cart from './Cart'
+import Search from './Search'
 
-const Navbar = ({carts,inc_decBtn,delCart}) => {
+const Navbar = ({carts,inc_decBtn,delCart,products}) => {
+
+
   const [openCart,setOpenCart] = useState(false);
   return (
     
   <>
-    <div className=" container-fluid fixed-top">
+    <div className=" container-fluid fixed-top shadow-sm">
       <div className=""></div>
       <div className="row">
         <div className="col-12">
           <div className="p-3 d-flex bg-light mt-2">
             <h3 className=''>Shop</h3>
             <div className="ms-auto d-flex">
-              <input type="text" className=' form-control' />
-              <button className="ms-2 btn btn-outline-primary">
-                <i className='bi bi-search'></i>
-              </button>
+             
+                <Search products={products}/>
                   <button type="button"
                     className="btn btn-outline-primary position-relative ms-2"
                     onClick={(_) => setOpenCart(true)}

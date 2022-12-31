@@ -1,9 +1,31 @@
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@100;300;400;700&display=swap');
 
 
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: 'Roboto', sans-serif;
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 .bg-black-50{
     background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.item-collector{
+    width: 700px;
+    position: absolute;
+   background-color:#D6E4E5;
+   top: 80px;
+   right: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+ .item-collector{
+    width: 700px;
+    position: absolute;
+   background-color:#D6E4E5;
+   top: 70px;
+   left: 20px;
+}
 }
