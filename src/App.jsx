@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss'
+import './style.css'
 import PorductShow from './components/PorductShow';
 import * as bootstrap from 'bootstrap'
 
